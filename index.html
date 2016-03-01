@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8" />
+
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/jquery.slidizle.js"></script>
+
+	<script>
+
+		jQuery(function($) {
+
+			// setup slidizle
+			$('[data-slidizle]').slidizle({
+				beforeChange : function(api) {
+					console.log('previous', api.getPreviousSlide().index());
+					console.log('current', api.getCurrentSlide().index());
+					console.log('next', api.getNextSlide().index());
+					console.log('previous active', api.getPreviousActiveSlide().index());
+				}
+			});
+
+		});
+
+	</script>
+    <style>
+    body{
+    	margin:0;
+    	padding: 0;
+    }
+    .fb{
+		position:absolute;
+		height:35px;
+		width:35px;
+		top:15px;
+		left:50px;
+		z-index:999999;
+	}
+	.tw{
+		position:absolute;
+		height:35px;
+		width:35px;
+		top:15px;
+		left:103px;
+		z-index:999999;
+	}
+	.pt{
+		position:absolute;
+		height:35px;
+		width:35px;
+		top:15px;
+		left:155px;
+		z-index:999999;
+	}
+    .contact{
+		position:absolute;
+		height:25px;
+		width:80px;
+		top:15px;
+		right:325px;
+		z-index:999999;
+	}
+	.tc{
+		position:absolute;
+		height:25px;
+		width:120px;
+		top:15px;
+		right:197px;
+		z-index:999999;
+	}
+	.getapp{
+		position:absolute;
+		height:45px;
+		width:140px;
+		top:10px;
+		right:37px;
+		z-index:999999;
+	}
+	
+	.getapp1{
+		position:absolute;
+		height:85px;
+		width:280px;
+		top:600px;
+		right:257px;
+		z-index:999999;
+	}
+    
+    header{
+    	background: url(img/header-bg.png) repeat;
+    	margin:0 auto; 
+    	overflow: hidden;
+    	padding: 5px;
+    }
+
+    header a.fb1{
+    	width: 35px;
+    	height:35px;
+    	float: left;
+    	margin-left: 50px;
+    	background: url(img/fb.png) no-repeat;
+    	background-size: 100% 100%;
+    }
+    header a.tw1{
+    	width: 35px;
+    	height:35px;
+    	float: left;
+    	background: url(img/tw.png) no-repeat;
+    	background-size: 100% 100%;
+    }
+     header a.pic{
+    	width: 35px;
+    	height:35px;
+    	float: left;
+    	background: url(img/pic.png) no-repeat;
+    	background-size: 100% 100%;
+    }
+    header a.getthe-app{
+    	width: 135px;
+    	height:45px;
+    	float: left;
+    	background: url(img/get-app.png) no-repeat;
+    	background-size: 100% 100%;
+    }
+     header a{
+     	float: left;
+     	margin:0px 5px; 
+     	color: #fff;
+     	text-decoration: none;
+     	font-size: 14px;
+     }
+    header h1{
+    	font-size: 24px;
+    	float: left;
+    	font-weight: bold;
+    	width: 46%;
+    	padding-right: 80px;
+    	text-align: right;
+    }
+    header a.getthe-app{
+    	float: right;
+    }
+    .head-a{
+    	margin: 10px 15px;
+    }
+
+@media screen and (max-width: 700px) {
+	.container{
+		margin:0;
+		padding: 0;
+	}
+	 header{
+	 	text-align: center;
+	 	overflow: hidden;
+	 }
+   header h1{
+    	font-size: 24px;
+    	font-weight: bold;
+    	display: block;
+    	float: none;
+    	width: 100%;
+    	padding: 0;
+    	text-align: center;
+    }
+    header a.fb1{
+    	width: 35px;
+    	height:35px;
+     	float: none;
+    	display: inline-block;
+    	margin-left: 0px;
+    	background: url(img/fb.png) no-repeat;
+    	background-size: 100% 100%;
+    }
+    header a.tw1{
+    	width: 35px;
+    	height:35px;
+     	float: none;
+    	display: inline-block;
+    	background: url(img/tw.png) no-repeat;
+    	background-size: 100% 100%;
+    }
+     header a.pic{
+    	width: 35px;
+    	height:35px;
+     	float: none;
+    	display: inline-block;
+    	background: url(img/pic.png) no-repeat;
+    	background-size: 100% 100%;
+    }
+    header a.getthe-app{
+    	width: 135px;
+    	height:45px;
+    	float: none;
+    	background: url(img/get-app.png) no-repeat;
+    	background-size: 100% 100%;
+    }
+    header a{
+     	float: none;
+     	display: inline-block;
+     	margin:0px 5px; 
+     	color: #fff;
+     	text-decoration: none;
+     	font-size: 14px;
+     }
+     .head-a{
+     	display: block;
+     	float: none;
+     }
+    .slider-content{
+    	width: 100% !important;
+    }
+    .slidizle-slide{
+    	height: 400px !important;
+    }
+}
+
+
+
+
+
+    </style>
+
+	<title>Home</title>
+
+</head>
+<body>
+
+
+	<div class="container">
+<header>
+ 	<a href="" class="fb1"></a>
+ 	<a href="" class="tw1"></a>
+ 	<a href="" class="pic"></a>
+ 		<h1>Never Forgoten</h1>
+ 	<a href="" class="head-a">Contact us</a>
+ 	<a href="" class="head-a">Terms & Conditions</a>
+
+ 	<a href="" class="getthe-app"></a>
+
+ </header>
+
+		<!-- timeout -->
+	  <section class="sample slider--animated" data-slidizle data-slidizle-timeout="2000" data-slidizle-loop="true" data-slidizle-pause-on-hover="true">
+
+			<ul class="slider-content" data-slidizle-content>
+		
+				<li class="slider-item" style="background-image:url('img/1.png')">
+				</li>
+				<li class="slider-item" style="background-image:url('img/2.png')">
+				</li>
+				<li class="slider-item" style="background-image:url('img/3.png')">
+				</li>
+				<li class="slider-item" style="background-image:url('img/4.png')">
+				</li>
+				<li class="slider-item" style="background-image:url('img/5.png')">
+				</li>
+			</ul>
+ 
+
+		<ul class="slider-navigation" data-slidizle-navigation>
+				<!-- automatically generated navigation -->
+		  </ul>
+          <a href="" class="fb"></a>
+          <a href="" class="tw"></a>
+          <a href="" class="pt"></a>
+          
+          <a href="" class="contact"></a>
+          <a href="" class="tc"></a>
+          <a href="" class="getapp"></a>
+          <a href="" class="getapp1"></a>
+          
+        </section>
+
+	
+
+		
+
+	</div>
+
+</body>
+</html>
